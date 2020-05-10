@@ -1,17 +1,33 @@
-set nocompatible
-runtime macros/matchit.vim
+syntax on
 
+set autoindent
+set shiftwidth=4
+set tabstop=4
+set smarttab
+set incsearch
 set number
+set history=1000
 
+" Plugin settings
 call plug#begin('~/.vim/plugged')
 
-" One dark theme
-Plug 'https://github.com/joshdick/onedark.vim.git'
-
-" Polyglot
-Plug 'https://github.com/sheerun/vim-polyglot.git'
+Plug 'joshdick/onedark.vim'
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" Plug 'dense-analysis/ale'
 
 call plug#end()
 
-syntax on
 colorscheme onedark
+
+let g:airline_theme='bubblegum'
+let g:airline_powerline_fonts = 1
+
+map <C-n> :NERDTreeToggle<CR>
+nnoremap H gT
+nnoremap L gt
