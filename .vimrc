@@ -17,9 +17,8 @@ Plug 'preservim/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-" Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -31,3 +30,4 @@ let g:airline_powerline_fonts = 1
 map <C-n> :NERDTreeToggle<CR>
 nnoremap H gT
 nnoremap L gt
+nnoremap <silent> <C-f> :Files<CR>
