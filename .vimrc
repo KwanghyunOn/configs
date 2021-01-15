@@ -19,6 +19,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
@@ -27,7 +28,15 @@ colorscheme onedark
 let g:airline_theme='bubblegum'
 let g:airline_powerline_fonts = 1
 
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+
+" open fzf finder
+nnoremap <silent> <C-f> :Files<CR>
+
+" move around tabs
 nnoremap H gT
 nnoremap L gt
-nnoremap <silent> <C-f> :Files<CR>
+
+" relocate current tab
+nnoremap <Leader>h :tabmove -1<CR>
+nnoremap <Leader>l :tabmove +1<CR>
