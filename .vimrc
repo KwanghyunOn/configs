@@ -38,5 +38,5 @@ nnoremap H gT
 nnoremap L gt
 
 " relocate current tab
-nnoremap <Leader>h :tabmove -1<CR>
-nnoremap <Leader>l :tabmove +1<CR>
+nnoremap <Leader>a :tabmove -1<CR>
+nnoremap <Leader>f :tabmove +1<CR>
