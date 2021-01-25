@@ -28,10 +28,15 @@ colorscheme onedark
 let g:airline_theme='bubblegum'
 let g:airline_powerline_fonts = 1
 
+" NerdTree
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 
-" open fzf finder
-nnoremap <silent> <C-f> :Files<CR>
+" open fzf finder with ag
+command! -bang -nargs=* AFiles
+  \ call fzf#vim#grep(
+  \   'ag --column -S -g '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+nnoremap <silent> <C-f> :AFiles<CR>
 
 " move around tabs
 nnoremap H gT
@@ -40,3 +45,4 @@ nnoremap L gt
 " relocate current tab
 nnoremap <Leader>a :tabmove -1<CR>
 nnoremap <Leader>f :tabmove +1<CR>
+
