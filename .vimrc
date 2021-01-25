@@ -32,11 +32,8 @@ let g:airline_powerline_fonts = 1
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 
 " open fzf finder with ag
-command! -bang -nargs=* AFiles
-  \ call fzf#vim#grep(
-  \   'ag --column -S -g '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
-nnoremap <silent> <C-f> :AFiles<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -S -g ""'
+nnoremap <silent> <C-f> :Files<CR>
 
 " move around tabs
 nnoremap H gT
