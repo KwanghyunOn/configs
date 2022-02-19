@@ -1,9 +1,11 @@
 syntax on
 
 set autoindent
-set shiftwidth=4
 set tabstop=4
+set shiftwidth=4
+set expandtab
 set smarttab
+set smartcase
 set incsearch
 set number
 set history=1000

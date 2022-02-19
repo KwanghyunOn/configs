@@ -1,0 +1,5 @@
+# Add 'source ~/.custom-alias' at the end of .zshrc
+
+function setcuda() {
+    export CUDA_VISIBLE_DEVICES="$1"
+}
