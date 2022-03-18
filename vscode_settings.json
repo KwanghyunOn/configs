@@ -1,0 +1,28 @@
+{
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["H"],
+            "commands": [
+                "workbench.action.previousEditorInGroup"
+            ]
+        },
+        {
+            "before": ["L"],
+            "commands": [
+                "workbench.action.nextEditorInGroup"
+            ]
+        },
+    ],
+    "vim.handleKeys": {
+        "<C-w>": false,
+        "<C-f>": false,
+        "<C-b>": false,
+        "<C-k>": false,
+    },
+    "search.followSymlinks": false,
+    "editor.minimap.enabled": false,
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "python.analysis.autoImportCompletions": false,
+}
