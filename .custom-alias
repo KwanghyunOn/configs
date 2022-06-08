@@ -1,5 +1,8 @@
-# Add 'source ~/.custom-alias' at the end of .zshrc
 
 function setcuda() {
     export CUDA_VISIBLE_DEVICES="$1"
+}
+
+function nvsmi() {
+    watch -d -n 0.5 nvidia-smi
 }
