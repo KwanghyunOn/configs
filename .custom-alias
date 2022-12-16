@@ -4,5 +4,9 @@ function setcuda() {
 }
 
 function nvsmi() {
-    watch -d -n 0.5 nvidia-smi
+    watch -d -n 0.5 nvidia-smi "$@"
+}
+
+function pwd2path() {
+    export PYTHONPATH=$(pwd):$PATH
 }
