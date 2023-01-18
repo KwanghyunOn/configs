@@ -1,0 +1,7 @@
+function nvsmi() {
+  watch -d -n 0.5 nvidia-smi "$@"
+}
+
+function setcuda() {
+  export CUDA_VISIBLE_DEVICES="$@"
+}
