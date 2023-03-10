@@ -8,5 +8,5 @@ function nvsmi() {
 }
 
 function pwd2path() {
-    export PYTHONPATH=$(pwd):$PATH
+    export PYTHONPATH=$(pwd):$PYTHONPATH
 }
