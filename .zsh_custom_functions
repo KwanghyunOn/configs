@@ -1,12 +1,13 @@
-
 function setcuda() {
-    export CUDA_VISIBLE_DEVICES="$1"
+  export CUDA_VISIBLE_DEVICES="$1"
+  echo "CUDA_VISIBLE_DEVICES set to $1"
 }
 
 function nvsmi() {
-    watch -d -n 0.5 nvidia-smi "$@"
+  watch -d -n 0.5 nvidia-smi "$@"
 }
 
-function pwd2path() {
-    export PYTHONPATH=$(pwd):$PYTHONPATH
+function pwd2pypath() {
+  export PYTHONPATH=$(pwd):$PYTHONPATH
+  echo "Add $(pwd) to PYTHONPATH"
 }
